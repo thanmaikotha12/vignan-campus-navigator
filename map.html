@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Map | Vignan CampusNav</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="map.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+
+        <div class="brand-logo">
+            V
+        </div>
+
+        <div>
+            <strong>Vignan</strong>
+            <small>CampusNav</small>
+        </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="map.html" class="active">
+            Campus Map
+        </a>
+
+        <a href="locations.html">
+            Locations
+        </a>
+
+        <a href="route.html">
+            Find Route
+        </a>
+
+        <a href="#">
+            About
+        </a>
+
+    </nav>
+
+
+    <button
+        id="themeToggle"
+        class="theme-toggle">
+
+        🌙
+
+    </button>
+
+
+    <button
+        id="menuToggle"
+        class="menu-toggle">
+
+        ☰
+
+    </button>
+
+</header>
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<div id="mobileMenu" class="mobile-menu">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="map.html">
+        Campus Map
+    </a>
+
+    <a href="locations.html">
+        Locations
+    </a>
+
+    <a href="route.html">
+        Find Route
+    </a>
+
+    <a href="#">
+        About
+    </a>
+
+</div>
+
+
+
+<!-- ================= PAGE ================= -->
+
+<main class="map-page">
+
+
+    <!-- ================= TOP ================= -->
+
+    <section class="map-intro">
+
+        <div>
+
+            <span class="map-kicker">
+                VIGNAN UNIVERSITY • VADLAMUDI
+            </span>
+
+            <h1>
+                Campus Map
+            </h1>
+
+            <p>
+                Explore buildings, academic blocks,
+                facilities and important places around
+                the Vignan campus.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MAP TOOLBAR ================= -->
+
+    <section class="map-wrapper">
+
+
+        <div class="map-toolbar">
+
+
+            <div class="map-search">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="mapSearch"
+                    placeholder="Search a building or facility...">
+
+                <button id="clearSearch">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="map-filters">
+
+                <button
+                    class="map-filter active"
+                    data-category="all">
+
+                    All
+
+                </button>
+
+                <button
+                    class="map-filter"
+                    data-category="academic">
+
+                    Academic
+
+                </button>
+
+                <button
+                    class="map-filter"
+                    data-category="student">
+
+                    Student
+
+                </button>
+
+                <button
+                    class="map-filter"
+                    data-category="facility">
+
+                    Facilities
+
+                </button>
+
+                <button
+                    class="map-filter"
+                    data-category="sports">
+
+                    Sports
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= MAP ================= -->
+
+        <div class="map-container">
+
+
+            <div
+                id="mapCanvas"
+                class="map-canvas">
+
+
+                <!-- ================= CAMPUS BACKGROUND ================= -->
+
+                <div class="campus-land land-one"></div>
+
+                <div class="campus-land land-two"></div>
+
+                <div class="campus-land land-three"></div>
+
+
+                <!-- ================= POND ================= -->
+
+                <div class="campus-water">
+
+                    <span>
+                        Vignan Campus
+                    </span>
+
+                </div>
+
+
+
+                <!-- ================= ROADS ================= -->
+
+                <div class="road main-road"></div>
+
+                <div class="road upper-road"></div>
+
+                <div class="road lower-road"></div>
+
+                <div class="road left-road"></div>
+
+                <div class="road vertical-road"></div>
+
+                <div class="road right-road"></div>
+
+
+
+                <!-- ================= ROAD LABELS ================= -->
+
+                <span class="road-name road-main-name">
+                    GUNTUR – TENALI ROAD
+                </span>
+
+                <span class="road-name road-campus-name">
+                    CAMPUS ROAD
+                </span>
+
+
+
+                <!-- ================= BUILDINGS ================= -->
+
+
+                <!-- MAIN UNIVERSITY -->
+
+                <button
+                    class="building academic"
+                    data-id="university"
+                    data-category="academic"
+                    style="left: 42%; top: 58%;">
+
+                    <span class="building-icon">
+                        🏫
+                    </span>
+
+                    <span class="building-name">
+                        Vignan University
+                    </span>
+
+                </button>
+
+
+
+                <!-- A BLOCK -->
+
+                <button
+                    class="building academic"
+                    data-id="a-block"
+                    data-category="academic"
+                    style="left: 48%; top: 51%;">
+
+                    <span class="building-icon">
+                        🏢
+                    </span>
+
+                    <span class="building-name">
+                        A Block
+                    </span>
+
+                </button>
+                <!-- N BLOCK -->
+<button
+    class="building academic"
+    data-id="n-block"
+    data-category="academic"
+    style="left: 45%; top: 42%;">
+
+    <span class="building-icon">🏢</span>
+
+    <span class="building-name">
+        N Block
+    </span>
+
+</button>
+
+
+
+                <!-- H BLOCK -->
+
+                <button
+                    class="building academic"
+                    data-id="h-block"
+                    data-category="academic"
+                    style="left: 57%; top: 59%;">
+
+                    <span class="building-icon">
+                        🏢
+                    </span>
+
+                    <span class="building-name">
+                        H Block
+                    </span>
+
+                </button>
+
+
+
+                <!-- U BLOCK -->
+
+                <button
+                    class="building academic"
+                    data-id="u-block"
+                    data-category="academic"
+                    style="left: 65%; top: 38%;">
+
+                    <span class="building-icon">
+                        💻
+                    </span>
+
+                    <span class="building-name">
+                        U Block
+                    </span>
+
+                </button>
+
+
+
+                <!-- FOUNDATION -->
+
+                <button
+                    class="building academic"
+                    data-id="foundation"
+                    data-category="academic"
+                    style="left: 73%; top: 43%;">
+
+                    <span class="building-icon">
+                        🔬
+                    </span>
+
+                    <span class="building-name">
+                        Vignan Foundation
+                    </span>
+
+                </button>
+
+
+
+                <!-- VISVESVARAYA -->
+
+                <button
+                    class="building academic"
+                    data-id="visvesvaraya"
+                    data-category="academic"
+                    style="left: 84%; top: 55%;">
+
+                    <span class="building-icon">
+                        🏛️
+                    </span>
+
+                    <span class="building-name">
+                        Visvesvaraya Block
+                    </span>
+
+                </button>
+
+
+
+                <!-- PHARMACY -->
+
+                <button
+                    class="building academic"
+                    data-id="pharmacy"
+                    data-category="academic"
+                    style="left: 68%; top: 77%;">
+
+                    <span class="building-icon">
+                        💊
+                    </span>
+
+                    <span class="building-name">
+                        Pharmacy College
+                    </span>
+
+                </button>
+
+
+
+                <!-- LIBRARY -->
+
+                <button
+                    class="building student"
+                    data-id="library"
+                    data-category="student"
+                    style="left: 50%; top: 76%;">
+
+                    <span class="building-icon">
+                        📚
+                    </span>
+
+                    <span class="building-name">
+                        Library
+                    </span>
+
+                </button>
+
+
+
+                <!-- PLAYGROUND -->
+
+                <button
+                    class="building sports"
+                    data-id="playground"
+                    data-category="sports"
+                    style="left: 78%; top: 73%;">
+
+                    <span class="building-icon">
+                        🏟️
+                    </span>
+
+                    <span class="building-name">
+                        Playground
+                    </span>
+
+                </button>
+
+
+
+                <!-- LARA -->
+
+                <button
+                    class="building academic"
+                    data-id="lara"
+                    data-category="academic"
+                    style="left: 91%; top: 69%;">
+
+                    <span class="building-icon">
+                        🏫
+                    </span>
+
+                    <span class="building-name">
+                        LARA Institute
+                    </span>
+
+                </button>
+
+
+
+                <!-- ADMIN -->
+
+                <button
+                    class="building facility"
+                    data-id="admin"
+                    data-category="facility"
+                    style="left: 31%; top: 76%;">
+
+                    <span class="building-icon">
+                        🏛️
+                    </span>
+
+                    <span class="building-name">
+                        Admin Block
+                    </span>
+
+                </button>
+
+
+
+                <!-- HOSTEL -->
+
+                <button
+                    class="building student"
+                    data-id="hostel"
+                    data-category="student"
+                    style="left: 30%; top: 44%;">
+
+                    <span class="building-icon">
+                        🛏️
+                    </span>
+
+                    <span class="building-name">
+                        Hostels
+                    </span>
+
+                </button>
+
+
+
+                <!-- MAIN GATE -->
+
+                <button
+                    class="building facility gate"
+                    data-id="gate"
+                    data-category="facility"
+                    style="left: 12%; top: 58%;">
+
+                    <span class="building-icon">
+                        🚪
+                    </span>
+
+                    <span class="building-name">
+                        Main Gate
+                    </span>
+
+                </button>
+
+
+
+                <!-- ================= MAP COMPASS ================= -->
+
+                <div class="compass">
+
+                    <strong>
+                        N
+                    </strong>
+
+                    <span>
+                        ▲
+                    </span>
+
+                </div>
+
+
+
+                <!-- ================= CONTROLS ================= -->
+
+                <div class="map-controls">
+
+                    <button id="zoomIn">
+                        +
+                    </button>
+
+                    <button id="zoomOut">
+                        −
+                    </button>
+
+                    <button id="resetMap">
+                        ⟳
+                    </button>
+
+                </div>
+
+
+
+                <!-- ================= SCALE ================= -->
+
+                <div class="scale">
+
+                    <div></div>
+
+                    <span>
+                        100 m
+                    </span>
+
+                </div>
+
+
+
+                <!-- ================= LOCATION COUNT ================= -->
+
+                <div
+                    id="locationCount"
+                    class="location-count">
+
+                    13 locations
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ================= INFORMATION CARD ================= -->
+
+            <div
+                id="mapPopup"
+                class="map-popup">
+
+
+                <button
+                    id="closePopup"
+                    class="popup-close">
+
+                    ×
+
+                </button>
+
+
+                <div
+                    id="popupIcon"
+                    class="popup-icon">
+
+                    🏫
+
+                </div>
+
+
+                <div class="popup-content">
+
+                    <span
+                        id="popupCategory"
+                        class="popup-category">
+
+                        Academic
+
+                    </span>
+
+                    <h2 id="popupName">
+                        Select a location
+                    </h2>
+
+                    <p id="popupDescription">
+                        Click a building on the map
+                        to see more information.
+                    </p>
+
+                    <div class="popup-details">
+
+                        <span id="popupArea">
+                            📍 Campus
+                        </span>
+
+                        <span id="popupHours">
+                            🕐 Campus Hours
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="navigateButton"
+                    class="popup-navigate">
+
+                    Navigate →
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+<!-- N BLOCK -->
+<button
+    class="building academic"
+    data-id="n-block"
+    data-category="academic"
+    style="left: 45%; top: 42%;">
+
+    <span class="building-icon">🏢</span>
+
+    <span class="building-name">
+        N Block
+    </span>
+
+</button>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <div class="footer-brand">
+                Vignan CampusNav
+            </div>
+
+            <p>
+                Smart navigation for a smarter campus.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="map.html">
+                Map
+            </a>
+
+            <a href="locations.html">
+                Locations
+            </a>
+
+            <a href="route.html">
+                Route
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Vignan CampusNav
+    </div>
+
+</footer>
+
+
+<script src="common.js"></script>
+<script src="map.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1151 @@
+/* =====================================================
+   VIGNAN CAMPUSNAV
+   REALISTIC CAMPUS MAP
+===================================================== */
+
+
+/* ================= PAGE ================= */
+
+.map-page {
+    background: #f3f7f4;
+    min-height: 850px;
+}
+
+
+/* ================= INTRO ================= */
+
+.map-intro {
+    padding: 50px 7% 30px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff,
+            #edf6ef
+        );
+}
+
+
+.map-kicker {
+    color: #126b45;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.map-intro h1 {
+    margin-top: 12px;
+
+    color: #18221d;
+
+    font-size: clamp(
+        42px,
+        5vw,
+        62px
+    );
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+
+.map-intro p {
+    max-width: 600px;
+
+    margin-top: 14px;
+
+    color: #748078;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ================= WRAPPER ================= */
+
+.map-wrapper {
+    width: 92%;
+
+    max-width: 1400px;
+
+    margin: 0 auto 70px;
+}
+
+
+/* ================= TOOLBAR ================= */
+
+.map-toolbar {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px;
+
+    background: white;
+
+    border: 1px solid #dce5df;
+
+    border-radius: 14px 14px 0 0;
+}
+
+
+/* ================= SEARCH ================= */
+
+.map-search {
+    width: 330px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 13px;
+
+    background: #f7faf8;
+
+    border: 1px solid #dce5df;
+
+    border-radius: 9px;
+}
+
+
+.map-search span {
+    color: #126b45;
+
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+
+.map-search input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 11px;
+
+    color: #28342d;
+}
+
+
+.map-search input::placeholder {
+    color: #99a39e;
+}
+
+
+.map-search button {
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    font-size: 19px;
+
+    color: #718078;
+
+    cursor: pointer;
+}
+
+
+/* ================= FILTERS ================= */
+
+.map-filters {
+    display: flex;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+}
+
+
+.map-filter {
+    padding: 8px 14px;
+
+    border: 1px solid #dce5df;
+
+    background: white;
+
+    color: #6c7971;
+
+    border-radius: 25px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.map-filter:hover {
+    border-color: #126b45;
+
+    color: #126b45;
+}
+
+
+.map-filter.active {
+    background: #126b45;
+
+    border-color: #126b45;
+
+    color: white;
+}
+
+
+/* ================= MAP CONTAINER ================= */
+
+.map-container {
+    position: relative;
+
+    height: 680px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #dce5df;
+
+    border-top: none;
+
+    border-radius: 0 0 14px 14px;
+
+    background: #dcebdc;
+}
+
+
+/* ================= MAP CANVAS ================= */
+
+.map-canvas {
+    position: absolute;
+
+    inset: 0;
+
+    transform-origin: center;
+
+    transition:
+        transform 0.3s ease;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.16) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            rgba(255,255,255,0.16) 1px,
+            transparent 1px
+        ),
+        #dcebdc;
+
+    background-size:
+        42px 42px;
+}
+
+
+/* ================= GREEN LAND ================= */
+
+.campus-land {
+    position: absolute;
+
+    background: #c8dfc9;
+
+    opacity: 0.7;
+
+    z-index: 1;
+}
+
+
+.land-one {
+    width: 360px;
+
+    height: 190px;
+
+    left: -80px;
+
+    top: 20px;
+
+    border-radius: 50%;
+
+    transform: rotate(-12deg);
+}
+
+
+.land-two {
+    width: 300px;
+
+    height: 170px;
+
+    right: -70px;
+
+    bottom: 20px;
+
+    border-radius: 55%;
+
+    transform: rotate(14deg);
+}
+
+
+.land-three {
+    width: 260px;
+
+    height: 150px;
+
+    left: 35%;
+
+    top: 2%;
+
+    border-radius: 50%;
+}
+
+
+/* ================= WATER ================= */
+
+.campus-water {
+    position: absolute;
+
+    width: 115px;
+
+    height: 82px;
+
+    right: 16%;
+
+    top: 10%;
+
+    border-radius:
+        55% 45% 48% 52%;
+
+    background: #83cee0;
+
+    border: 5px solid
+        rgba(255,255,255,0.7);
+
+    z-index: 3;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.campus-water span {
+    font-size: 7px;
+
+    font-weight: 800;
+
+    color: rgba(255,255,255,0.8);
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ================= ROADS ================= */
+
+.road {
+    position: absolute;
+
+    z-index: 4;
+
+    background: #f7f2e7;
+
+    border:
+        2px solid #ddd6c5;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(255,255,255,0.5);
+}
+
+
+/* MAIN HORIZONTAL ROAD */
+
+.main-road {
+    width: 120%;
+
+    height: 66px;
+
+    left: -10%;
+
+    top: 50%;
+
+    transform: rotate(-3deg);
+}
+
+
+/* TOP ROAD */
+
+.upper-road {
+    width: 80%;
+
+    height: 34px;
+
+    left: 23%;
+
+    top: 25%;
+
+    transform: rotate(29deg);
+}
+
+
+/* LOWER ROAD */
+
+.lower-road {
+    width: 80%;
+
+    height: 38px;
+
+    left: 15%;
+
+    bottom: 18%;
+
+    transform: rotate(-19deg);
+}
+
+
+/* LEFT CONNECTION */
+
+.left-road {
+    width: 42%;
+
+    height: 28px;
+
+    left: -7%;
+
+    top: 70%;
+
+    transform: rotate(18deg);
+}
+
+
+/* VERTICAL ROAD */
+
+.vertical-road {
+    width: 42px;
+
+    height: 95%;
+
+    left: 51%;
+
+    top: -10%;
+
+    transform: rotate(8deg);
+}
+
+
+/* RIGHT ROAD */
+
+.right-road {
+    width: 36px;
+
+    height: 55%;
+
+    right: 14%;
+
+    top: 42%;
+
+    transform: rotate(-18deg);
+}
+
+
+/* ================= ROAD LABEL ================= */
+
+.road-name {
+    position: absolute;
+
+    z-index: 7;
+
+    color: #9d9584;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    pointer-events: none;
+}
+
+
+.road-main-name {
+    top: 47%;
+
+    left: 18%;
+
+    transform: rotate(-3deg);
+}
+
+
+.road-campus-name {
+    top: 62%;
+
+    left: 58%;
+
+    transform: rotate(-3deg);
+}
+
+
+/* ================= BUILDINGS ================= */
+
+.building {
+    position: absolute;
+
+    z-index: 15;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 0;
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease;
+
+    font-family: inherit;
+}
+
+
+.building:hover {
+    z-index: 30;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+}
+
+
+/* ================= ICON ================= */
+
+.building-icon {
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: white;
+
+    border: 3px solid #126b45;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 6px 16px
+        rgba(20,55,35,0.22);
+
+    transition: 0.2s;
+}
+
+
+.building:hover .building-icon {
+    background: #126b45;
+
+    border-color: white;
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* ================= LABEL ================= */
+
+.building-name {
+    padding: 6px 9px;
+
+    background: white;
+
+    color: #344039;
+
+    border-radius: 6px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 4px 12px
+        rgba(20,50,35,0.12);
+}
+
+
+/* ================= SELECTED ================= */
+
+.building.selected {
+    z-index: 40;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.1);
+}
+
+
+.building.selected .building-icon {
+    background: #126b45;
+
+    color: white;
+
+    border-color: white;
+
+    box-shadow:
+        0 0 0 8px
+        rgba(18,107,69,0.15),
+        0 10px 20px
+        rgba(18,107,69,0.25);
+}
+
+
+/* ================= COMPASS ================= */
+
+.compass {
+    position: absolute;
+
+    left: 20px;
+
+    top: 20px;
+
+    width: 48px;
+
+    height: 48px;
+
+    z-index: 50;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 6px 15px
+        rgba(20,50,35,0.12);
+}
+
+
+.compass strong {
+    color: #126b45;
+
+    font-size: 15px;
+}
+
+
+.compass span {
+    color: #126b45;
+
+    font-size: 8px;
+}
+
+
+/* ================= CONTROLS ================= */
+
+.map-controls {
+    position: absolute;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    z-index: 50;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.map-controls button {
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid #d7e1da;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: #4c5951;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 14px
+        rgba(20,50,35,0.12);
+}
+
+
+.map-controls button:hover {
+    color: #126b45;
+}
+
+
+/* ================= SCALE ================= */
+
+.scale {
+    position: absolute;
+
+    left: 22px;
+
+    bottom: 20px;
+
+    z-index: 50;
+
+    color: #6e7972;
+
+    font-size: 8px;
+
+    font-weight: 800;
+}
+
+
+.scale div {
+    width: 65px;
+
+    height: 6px;
+
+    border-left:
+        2px solid #6e7972;
+
+    border-right:
+        2px solid #6e7972;
+
+    border-bottom:
+        2px solid #6e7972;
+
+    margin-bottom: 4px;
+}
+
+
+/* ================= COUNT ================= */
+
+.location-count {
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    z-index: 50;
+
+    padding: 9px 13px;
+
+    background:
+        rgba(255,255,255,0.95);
+
+    border: 1px solid #dce5df;
+
+    border-radius: 20px;
+
+    color: #526058;
+
+    font-size: 8px;
+
+    font-weight: 800;
+}
+
+
+/* ================= POPUP ================= */
+
+.map-popup {
+    position: absolute;
+
+    left: 25px;
+
+    bottom: 25px;
+
+    z-index: 100;
+
+    width: 430px;
+
+    min-height: 145px;
+
+    padding: 20px;
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+    background:
+        rgba(255,255,255,0.97);
+
+    border:
+        1px solid #dce5df;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(20,50,35,0.18);
+
+    transform:
+        translateY(20px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.25s;
+}
+
+
+.map-popup.show {
+    transform:
+        translateY(0);
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+.popup-close {
+    position: absolute;
+
+    right: 10px;
+
+    top: 10px;
+
+    width: 27px;
+
+    height: 27px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #eef3ef;
+
+    color: #67736c;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+.popup-icon {
+    width: 65px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 16px;
+
+    background: #e4f2e8;
+
+    font-size: 28px;
+}
+
+
+.popup-content {
+    flex: 1;
+}
+
+
+.popup-category {
+    display: inline-block;
+
+    margin-bottom: 5px;
+
+    padding: 5px 8px;
+
+    background: #e5f2e9;
+
+    color: #126b45;
+
+    border-radius: 20px;
+
+    font-size: 7px;
+
+    font-weight: 800;
+}
+
+
+.popup-content h2 {
+    margin: 0 0 6px;
+
+    color: #1e2923;
+
+    font-size: 20px;
+}
+
+
+.popup-content p {
+    margin: 0 0 10px;
+
+    color: #7a857e;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+.popup-details {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.popup-details span {
+    color: #68746d;
+
+    font-size: 8px;
+}
+
+
+.popup-navigate {
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 10px 12px;
+
+    background: #126b45;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* ================= DARK MODE ================= */
+
+body.dark .map-page {
+    background: #101713;
+}
+
+
+body.dark .map-intro {
+    background: #142019;
+}
+
+
+body.dark .map-intro h1 {
+    color: #edf4ef;
+}
+
+
+body.dark .map-intro p {
+    color: #a0ada5;
+}
+
+
+body.dark .map-toolbar {
+    background: #19231e;
+
+    border-color: #2e3b33;
+}
+
+
+body.dark .map-search {
+    background: #202b25;
+
+    border-color: #35443b;
+}
+
+
+body.dark .map-search input {
+    color: white;
+}
+
+
+body.dark .map-filter {
+    background: #19231e;
+
+    border-color: #35443b;
+
+    color: #a4afa8;
+}
+
+
+body.dark .map-popup {
+    background: #19231e;
+
+    border-color: #35443b;
+}
+
+
+body.dark .popup-content h2 {
+    color: #edf4ef;
+}
+
+
+body.dark .popup-content p,
+body.dark .popup-details span {
+    color: #a0ada5;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .map-toolbar {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .map-search {
+        width: auto;
+    }
+
+
+    .map-filters {
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+    }
+
+
+    .map-filter {
+        white-space: nowrap;
+    }
+
+
+    .map-container {
+        height: 600px;
+    }
+
+
+    .map-popup {
+        width: calc(100% - 40px);
+
+        left: 20px;
+
+        bottom: 20px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .map-intro {
+        padding: 40px 5% 25px;
+    }
+
+
+    .map-wrapper {
+        width: 96%;
+    }
+
+
+    .map-container {
+        height: 560px;
+    }
+
+
+    .map-popup {
+        min-height: 120px;
+
+        padding: 15px;
+
+        gap: 10px;
+    }
+
+
+    .popup-icon {
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 22px;
+    }
+
+
+    .popup-content h2 {
+        font-size: 16px;
+    }
+
+
+    .popup-navigate {
+        display: none;
+    }
+
+
+    .building-icon {
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 17px;
+    }
+
+
+    .building-name {
+        font-size: 7px;
+
+        padding: 5px 7px;
+    }
+
+}

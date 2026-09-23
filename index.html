@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vignan CampusNav</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-logo">V</div>
+
+            <div>
+                <strong>Vignan</strong>
+                <small>CampusNav</small>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html" class="active">Home</a>
+
+            <a href="map.html">Campus Map</a>
+
+            <a href="locations.html">Locations</a>
+
+            <a href="route.html">Find Route</a>
+
+            <a href="about.html">About</a>
+
+        </nav>
+
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle theme">
+
+            🌙
+
+        </button>
+
+
+        <button
+            id="menuToggle"
+            class="menu-toggle">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+
+    <!-- MOBILE NAV -->
+
+    <div id="mobileMenu" class="mobile-menu">
+
+        <a href="index.html">Home</a>
+
+        <a href="map.html">Campus Map</a>
+
+        <a href="locations.html">Locations</a>
+
+        <a href="route.html">Find Route</a>
+
+        <a href="about.html">About</a>
+
+    </div>
+
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    VIGNAN UNIVERSITY • VADLAMUDI
+                </div>
+
+                <h1>
+                    Navigate
+                    <span>Vignan.</span>
+                </h1>
+
+                <p>
+                    Find buildings, discover campus facilities
+                    and navigate around Vignan's campus with ease.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="map.html"
+                        class="btn btn-primary">
+
+                        Explore Campus
+                        <span>→</span>
+
+                    </a>
+
+
+                    <a
+                        href="route.html"
+                        class="btn btn-outline">
+
+                        Find a Route
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="hero-visual">
+
+                <div class="map-preview">
+
+                    <div class="preview-road road-a"></div>
+
+                    <div class="preview-road road-b"></div>
+
+                    <div class="preview-road road-c"></div>
+
+
+                    <div class="preview-building preview-a">
+                        A
+                    </div>
+
+                    <div class="preview-building preview-h">
+                        H
+                    </div>
+
+                    <div class="preview-building preview-u">
+                        U
+                    </div>
+
+                    <div class="preview-building preview-library">
+                        📚
+                    </div>
+
+
+                    <div class="preview-marker marker-one">
+                        📍
+                    </div>
+
+                    <div class="preview-marker marker-two">
+                        📍
+                    </div>
+
+
+                    <div class="preview-label label-a">
+                        A Block
+                    </div>
+
+                    <div class="preview-label label-h">
+                        H Block
+                    </div>
+
+                    <div class="preview-label label-u">
+                        U Block
+                    </div>
+
+                    <div class="preview-label label-library">
+                        Library
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SEARCH -->
+
+        <section class="home-search">
+
+            <div class="home-search-box">
+
+                <span>⌕</span>
+
+                <input
+                    id="homeSearch"
+                    type="text"
+                    placeholder="Search a building or facility..."
+                    autocomplete="off">
+
+                <button id="homeSearchButton">
+                    Search
+                </button>
+
+            </div>
+
+
+            <div
+                id="homeSearchResults"
+                class="home-search-results">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- QUICK STATS -->
+
+        <section class="stats-section">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏫
+                </div>
+
+                <strong>10+</strong>
+
+                <span>Campus Locations</span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🧭
+                </div>
+
+                <strong>Routes</strong>
+
+                <span>Campus Navigation</span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📚
+                </div>
+
+                <strong>Facilities</strong>
+
+                <span>Academic & Student</span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📍
+                </div>
+
+                <strong>Vignan</strong>
+
+                <span>Vadlamudi Campus</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FEATURES -->
+
+        <section class="features-section">
+
+            <div class="section-title">
+
+                <div class="eyebrow">
+                    CAMPUS EXPLORER
+                </div>
+
+                <h2>
+                    Everything you need
+                    <span>on campus.</span>
+                </h2>
+
+                <p>
+                    CampusNav brings important campus locations
+                    and navigation tools together in one place.
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-grid">
+
+                <a
+                    href="map.html"
+                    class="feature-card">
+
+                    <div class="feature-icon">
+                        🗺️
+                    </div>
+
+                    <h3>
+                        Interactive Map
+                    </h3>
+
+                    <p>
+                        Explore campus buildings, roads,
+                        facilities and important landmarks.
+                    </p>
+
+                    <span class="feature-link">
+                        Open map →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="locations.html"
+                    class="feature-card">
+
+                    <div class="feature-icon">
+                        🏢
+                    </div>
+
+                    <h3>
+                        Campus Directory
+                    </h3>
+
+                    <p>
+                        Find detailed information about
+                        academic and student facilities.
+                    </p>
+
+                    <span class="feature-link">
+                        View locations →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="route.html"
+                    class="feature-card">
+
+                    <div class="feature-icon">
+                        🧭
+                    </div>
+
+                    <h3>
+                        Route Finder
+                    </h3>
+
+                    <p>
+                        Choose two locations and find
+                        a walking route between them.
+                    </p>
+
+                    <span class="feature-link">
+                        Find route →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CTA -->
+
+        <section class="cta-section">
+
+            <div>
+
+                <div class="eyebrow">
+                    VIGNAN CAMPUS
+                </div>
+
+                <h2>
+                    Lost on campus?
+                    <br>
+                    <span>We've got you.</span>
+                </h2>
+
+                <p>
+                    Search a location or explore the
+                    interactive campus map.
+                </p>
+
+            </div>
+
+
+            <a
+                href="map.html"
+                class="btn btn-light">
+
+                Open Campus Map →
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <div class="footer-brand">
+                    Vignan CampusNav
+                </div>
+
+                <p>
+                    Smart navigation for a smarter campus.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="map.html">Map</a>
+
+                <a href="locations.html">Locations</a>
+
+                <a href="route.html">Route</a>
+
+                <a href="about.html">About</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Vignan CampusNav • Built with HTML, CSS & JavaScript
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Locations | Vignan CampusNav</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="locations.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-logo">
+                V
+            </div>
+
+            <div>
+                <strong>Vignan</strong>
+                <small>CampusNav</small>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="map.html">
+                Campus Map
+            </a>
+
+            <a
+                href="locations.html"
+                class="active">
+
+                Locations
+
+            </a>
+
+            <a href="route.html">
+                Find Route
+            </a>
+
+            <a href="#">
+                About
+            </a>
+
+        </nav>
+
+
+        <button
+            id="themeToggle"
+            class="theme-toggle">
+
+            🌙
+
+        </button>
+
+
+        <button
+            id="menuToggle"
+            class="menu-toggle">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div
+        id="mobileMenu"
+        class="mobile-menu">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="map.html">
+            Campus Map
+        </a>
+
+        <a href="locations.html">
+            Locations
+        </a>
+
+        <a href="route.html">
+            Find Route
+        </a>
+
+        <a href="#">
+            About
+        </a>
+
+    </div>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="locations-hero">
+
+        <div class="locations-hero-content">
+
+            <div class="location-eyebrow">
+                VIGNAN UNIVERSITY • CAMPUS DIRECTORY
+            </div>
+
+            <h1>
+                Explore the campus.
+            </h1>
+
+            <p>
+                Discover academic blocks, facilities,
+                student spaces and important locations
+                across Vignan University.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="locations-main">
+
+
+        <!-- ================= SEARCH ================= -->
+
+        <section class="location-search">
+
+            <div class="search-box">
+
+                <span>
+                    🔎
+                </span>
+
+                <input
+                    type="text"
+                    id="locationSearch"
+                    placeholder="Search buildings, facilities or blocks...">
+
+                <button id="clearSearch">
+                    ×
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <section class="location-filters">
+
+            <button
+                class="filter-btn active"
+                data-category="all">
+
+                All
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="academic">
+
+                🎓 Academic
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="student">
+
+                👥 Student
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="food">
+
+                🍴 Food
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="sports">
+
+                🏟️ Sports
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="services">
+
+                🏥 Services
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================= RESULTS INFO ================= -->
+
+        <div class="results-header">
+
+            <div>
+
+                <strong>
+                    Campus locations
+                </strong>
+
+                <span id="resultCount">
+                    10 locations
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= LOCATION GRID ================= -->
+
+        <section
+            id="locationGrid"
+            class="location-grid">
+
+
+            <!-- A BLOCK -->
+
+            <article
+                class="location-card"
+                data-category="academic"
+                data-name="A Block">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon">
+                        🏫
+                    </div>
+
+                    <span class="category-badge academic">
+                        Academic
+                    </span>
+
+                </div>
+
+                <h2>
+                    A Block
+                </h2>
+
+                <p>
+                    One of the major academic buildings
+                    serving classrooms and departmental
+                    activities.
+                </p>
+
+                <div class="location-meta">
+
+                    <span>
+                        📍 Academic Zone
+                    </span>
+
+                    <span>
+                        🕐 8 AM – 6 PM
+                    </span>
+
+                </div>
+
+                <button
+                    class="details-btn"
+                    data-location="a-block">
+
+                    View Details
+                    <span>→</span>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- H BLOCK -->
+
+            <article
+                class="location-card"
+                data-category="academic"
+                data-name="H Block">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon">
+                        🏢
+                    </div>
+
+                    <span class="category-badge academic">
+                        Academic
+                    </span>
+
+                </div>
+
+                <h2>
+                    H Block
+                </h2>
+
+                <p>
+                    Academic block with classrooms,
+                    laboratories and student learning
+                    spaces.
+                </p>
+
+                <div class="location-meta">
+
+                    <span>
+                        📍 Academic Zone
+                    </span>
+
+                    <span>
+                        🕐 8 AM – 6 PM
+                    </span>
+
+                </div>
+
+                <button
+                    class="details-btn"
+                    data-location="h-block">
+
+                    View Details
+                    <span>→</span>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- U BLOCK -->
+
+            <article
+                class="location-card"
+                data-category="academic"
+                data-name="U Block">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon">
+                        💻
+                    </div>
+
+                    <span class="category-badge academic">
+                        Academic
+                    </span>
+
+                </div>
+
+                <h2>
+                    U Block
+                </h2>
+
+                <p>
+                    Computer and technology-focused
+                    academic space for programming and
+                    practical learning.
+                </p>
+
+                <div class="location-meta">
+
+                    <span>
+                        📍 Academic Zone
+                    </span>
+
+                    <span>
+                        🕐 8 AM – 6 PM
+                    </span>
+
+                </div>
+
+                <button
+                    class="details-btn"
+                    data-location="u-block">
+
+                    View Details
+                    <span>→</span>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- LIBRARY -->
+
+            <article
+                class="location-card"
+                data-category="student"
+                data-name="NTR Vignan Library">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon">
+                        📚
+                    </div>
+
+                    <span class="category-badge student">
+                        Student
+                    </span>
+
+                </div>
+
+                <h2>
+                    NTR Vignan Library
+                </h2>
+
+                <p>
+                    Central learning resource with books,
+                    study areas and digital academic
+                    resources.
+                </p>
+
+                <div class="location-meta">
+
+                    <span>
+                        📍 Learning Zone
+                    </span>
+
+                    <span>
+                        🕐 8 AM – 8 PM
+                    </span>
+
+                </div>
+
+                <button
+                    class="details-btn"
+                    data-location="library">
+
+                    View Details
+                    <span>→</span>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- ADMIN -->
+
+            <article
+                class="location-card"
+                data-category="services"
+                data-name="Administrative Block">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon">
+                        🏛️
+                    </div>
+
+                    <span class="category-badge services">
+                        Services
+                    </span>
+
+                </div>
+
+                <h2>
+                    Administrative Block
+                </h2>
+
+                <p>
+                    Main administrative facility for
+                    admissions, student services and
+                    university administration.
+                </p>
+
+                <div class="location-meta">
+
+                    <span>
+                        📍 Administration
+                    </span>
+
+                    <span>
+                        🕐 9 AM – 5 PM
+                    </span>
+
+                </div>
+
+                <button
+                    class="details-btn"
+                    data-location="admin">
+
+                    View Details
+                    <span>→</span>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- PHARMACY -->
+
+            <article
+                class="location-card"
+                data-category="academic"
+                data-name="Pharmacy College">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon">
+                        💊
+                    </div>
+
+                    <span class="category-badge academic">
+                        Academic
+                    </span>
+
+                </div>
+
+                <h2>
+                    Pharmacy College
+                </h2>
+
+                <p>
+                    Academic facility supporting pharmacy
+                    education, laboratories and practical
+                    learning.
+                </p>
+
+                <div class="location-meta">
+
+                    <span>
+                        📍 Academic Zone
+                    </span>
+
+                    <span>
+                        🕐 9 AM – 5 PM
+                    </span>
+
+                </div>
+
+                <button
+                    class="details-btn"
+                    data-location="pharmacy">
+
+                    View Details
+                    <span>→</span>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- HOSTELS -->
+
+            <article
+                class="location-card"
+                data-category="student"
+                data-name="Hostels">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon">
+                        🛏️
+                    </div>
+
+                    <span class="category-badge student">
+                        Student
+                    </span>
+
+                </div>
+
+                <h2>
+                    Student Hostels
+                </h2>
+
+                <p>
+                    Residential facilities providing
+                    accommodation and essential student
+                    amenities.
+                </p>
+
+                <div class="location-meta">
+
+                    <span>
+                        📍 Residential Zone
+                    </span>
+
+                    <span>
+                        🕐 24 Hours
+                    </span>
+
+                </div>
+
+                <button
+                    class="details-btn"
+                    data-location="hostel">
+
+                    View Details
+                    <span>→</span>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- CAFETERIA -->
+
+            <article
+                class="location-card"
+                data-category="food"
+                data-name="Campus Cafeteria">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon">
+                        🍴
+                    </div>
+
+                    <span class="category-badge food">
+                        Food
+                    </span>
+
+                </div>
+
+                <h2>
+                    Campus Cafeteria
+                </h2>
+
+                <p>
+                    Student dining space offering meals,
+                    snacks and refreshments throughout
+                    the day.
+                </p>
+
+                <div class="location-meta">
+
+                    <span>
+                        📍 Student Zone
+                    </span>
+
+                    <span>
+                        🕐 8 AM – 8 PM
+                    </span>
+
+                </div>
+
+                <button
+                    class="details-btn"
+                    data-location="cafeteria">
+
+                    View Details
+                    <span>→</span>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- HEALTH CENTRE -->
+
+            <article
+                class="location-card"
+                data-category="services"
+                data-name="Health Centre">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon">
+                        🏥
+                    </div>
+
+                    <span class="category-badge services">
+                        Services
+                    </span>
+
+                </div>
+
+                <h2>
+                    Health Centre
+                </h2>
+
+                <p>
+                    Campus health facility providing
+                    basic medical support and student
+                    health services.
+                </p>
+
+                <div class="location-meta">
+
+                    <span>
+                        📍 Service Zone
+                    </span>
+
+                    <span>
+                        🕐 Campus Hours
+                    </span>
+
+                </div>
+
+                <button
+                    class="details-btn"
+                    data-location="medical">
+
+                    View Details
+                    <span>→</span>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- PLAYGROUND -->
+
+            <article
+                class="location-card"
+                data-category="sports"
+                data-name="University Playground">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon">
+                        🏟️
+                    </div>
+
+                    <span class="category-badge sports">
+                        Sports
+                    </span>
+
+                </div>
+
+                <h2>
+                    University Playground
+                </h2>
+
+                <p>
+                    Outdoor recreation area for sports,
+                    physical activities and university
+                    events.
+                </p>
+
+                <div class="location-meta">
+
+                    <span>
+                        📍 Sports Zone
+                    </span>
+
+                    <span>
+                        🕐 6 AM – 8 PM
+                    </span>
+
+                </div>
+
+                <button
+                    class="details-btn"
+                    data-location="sports">
+
+                    View Details
+                    <span>→</span>
+
+                </button>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- NO RESULTS -->
+
+        <section
+            id="noResults"
+            class="no-results hidden">
+
+            <div>
+                🔎
+            </div>
+
+            <h2>
+                No locations found
+            </h2>
+
+            <p>
+                Try searching for another building
+                or facility.
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= DETAILS MODAL ================= -->
+
+    <div
+        id="locationModal"
+        class="modal-overlay">
+
+
+        <div class="location-modal">
+
+
+            <button
+                id="closeModal"
+                class="modal-close">
+
+                ×
+
+            </button>
+
+
+            <div
+                id="modalIcon"
+                class="modal-icon">
+
+                🏫
+
+            </div>
+
+
+            <span
+                id="modalCategory"
+                class="modal-category">
+
+                Academic
+
+            </span>
+
+
+            <h2 id="modalName">
+                A Block
+            </h2>
+
+
+            <p id="modalDescription">
+                Building description
+            </p>
+
+
+            <!-- DETAILS GRID -->
+
+            <div class="modal-info-grid">
+
+
+                <div class="modal-info">
+
+                    <span>
+                        📍
+                    </span>
+
+                    <div>
+
+                        <small>
+                            LOCATION
+                        </small>
+
+                        <strong id="modalLocation">
+                            Academic Zone
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-info">
+
+                    <span>
+                        🕐
+                    </span>
+
+                    <div>
+
+                        <small>
+                            HOURS
+                        </small>
+
+                        <strong id="modalHours">
+                            8 AM – 6 PM
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-info">
+
+                    <span>
+                        🏷️
+                    </span>
+
+                    <div>
+
+                        <small>
+                            TYPE
+                        </small>
+
+                        <strong id="modalType">
+                            Academic
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-info">
+
+                    <span>
+                        ✨
+                    </span>
+
+                    <div>
+
+                        <small>
+                            FACILITIES
+                        </small>
+
+                        <strong id="modalFacilities">
+                            Classrooms
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="modal-actions">
+
+                <button
+                    id="navigateButton"
+                    class="navigate-button">
+
+                    🧭 Navigate Here
+
+                </button>
+
+
+                <button
+                    id="modalMapButton"
+                    class="modal-map-button">
+
+                    🗺️ View on Map
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <div class="footer-brand">
+                    Vignan CampusNav
+                </div>
+
+                <p>
+                    Smart navigation for a smarter campus.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="map.html">
+                    Campus Map
+                </a>
+
+                <a href="locations.html">
+                    Locations
+                </a>
+
+                <a href="route.html">
+                    Find Route
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Vignan CampusNav
+        </div>
+
+    </footer>
+
+
+
+    <script src="common.js"></script>
+
+    <script src="locations.js"></script>
+
+</body>
+
+</html>

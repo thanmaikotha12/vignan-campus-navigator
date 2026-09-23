@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Find Route | Vignan CampusNav</title>
+
+    <!-- Common website styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Route page styles -->
+    <link rel="stylesheet" href="route.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-logo">V</div>
+
+            <div>
+                <strong>Vignan</strong>
+                <small>CampusNav</small>
+            </div>
+
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="map.html">
+                Campus Map
+            </a>
+
+            <a href="#">
+                Locations
+            </a>
+
+            <a href="route.html" class="active">
+                Find Route
+            </a>
+
+            <a href="#">
+                About
+            </a>
+
+        </nav>
+
+        <button
+            id="themeToggle"
+            class="theme-toggle">
+            🌙
+        </button>
+
+        <button
+            id="menuToggle"
+            class="menu-toggle">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div id="mobileMenu" class="mobile-menu">
+
+        <a href="index.html">Home</a>
+
+        <a href="map.html">Campus Map</a>
+
+        <a href="#">Locations</a>
+
+        <a href="route.html">Find Route</a>
+
+        <a href="#">About</a>
+
+    </div>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="route-hero">
+
+        <div class="route-hero-content">
+
+            <div class="route-eyebrow">
+                VIGNAN UNIVERSITY • WAYFINDING
+            </div>
+
+            <h1>
+                Find your route.
+            </h1>
+
+            <p>
+                Choose where you are and where you want to go.
+                CampusNav will find a convenient walking route
+                across the campus.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="route-main">
+
+
+        <!-- ================= ROUTE CARD ================= -->
+
+        <section class="route-planner-card">
+
+            <div class="route-field">
+
+                <label>
+                    STARTING POINT
+                </label>
+
+                <div class="route-select-box">
+
+                    <span class="route-field-icon">
+                        📍
+                    </span>
+
+                    <select id="fromLocation">
+
+                        <option value="">
+                            Choose starting point
+                        </option>
+
+                        <option value="gate">
+                            Main Gate
+                        </option>
+
+                        <option value="a-block">
+                            A Block
+                        </option>
+
+                        <option value="h-block">
+                            H Block
+                        </option>
+
+                        <option value="u-block">
+                            U Block
+                        </option>
+
+                        <option value="library">
+                            NTR Vignan Library
+                        </option>
+
+                        <option value="admin">
+                            Administrative Block
+                        </option>
+
+                        <option value="pharmacy">
+                            Pharmacy College
+                        </option>
+
+                        <option value="hostel">
+                            Hostels
+                        </option>
+
+                        <option value="medical">
+                            Health Centre
+                        </option>
+
+                        <option value="sports">
+                            University Playground
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- SWAP -->
+
+            <button
+                id="swapLocations"
+                class="route-swap"
+                title="Swap locations">
+
+                ⇄
+
+            </button>
+
+
+            <div class="route-field">
+
+                <label>
+                    DESTINATION
+                </label>
+
+                <div class="route-select-box">
+
+                    <span class="route-field-icon">
+                        🎯
+                    </span>
+
+                    <select id="toLocation">
+
+                        <option value="">
+                            Choose destination
+                        </option>
+
+                        <option value="gate">
+                            Main Gate
+                        </option>
+
+                        <option value="a-block">
+                            A Block
+                        </option>
+
+                        <option value="h-block">
+                            H Block
+                        </option>
+
+                        <option value="u-block">
+                            U Block
+                        </option>
+
+                        <option value="library">
+                            NTR Vignan Library
+                        </option>
+
+                        <option value="admin">
+                            Administrative Block
+                        </option>
+
+                        <option value="pharmacy">
+                            Pharmacy College
+                        </option>
+
+                        <option value="hostel">
+                            Hostels
+                        </option>
+
+                        <option value="medical">
+                            Health Centre
+                        </option>
+
+                        <option value="sports">
+                            University Playground
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="findRouteButton"
+                class="find-route-button">
+
+                <span>🧭</span>
+
+                Find Route
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================= QUICK ROUTES ================= -->
+
+        <section class="quick-section">
+
+            <div class="quick-heading">
+
+                <strong>
+                    Popular routes
+                </strong>
+
+                <span>
+                    Try a common campus journey
+                </span>
+
+            </div>
+
+
+            <div class="quick-buttons">
+
+                <button
+                    class="quick-route"
+                    data-from="gate"
+                    data-to="library">
+
+                    <span>🚪</span>
+
+                    Main Gate
+
+                    <b>→</b>
+
+                    <span>📚</span>
+
+                    Library
+
+                </button>
+
+
+                <button
+                    class="quick-route"
+                    data-from="a-block"
+                    data-to="u-block">
+
+                    <span>🏫</span>
+
+                    A Block
+
+                    <b>→</b>
+
+                    <span>💻</span>
+
+                    U Block
+
+                </button>
+
+
+                <button
+                    class="quick-route"
+                    data-from="library"
+                    data-to="sports">
+
+                    <span>📚</span>
+
+                    Library
+
+                    <b>→</b>
+
+                    <span>🏟️</span>
+
+                    Playground
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= EMPTY STATE ================= -->
+
+        <section
+            id="routeEmpty"
+            class="route-empty">
+
+            <div class="route-empty-icon">
+                🧭
+            </div>
+
+            <h2>
+                Where do you want to go?
+            </h2>
+
+            <p>
+                Select a starting point and destination
+                above to see your walking route.
+            </p>
+
+        </section>
+
+
+
+        <!-- ================= ROUTE RESULT ================= -->
+
+        <section
+            id="routeResult"
+            class="route-result hidden">
+
+
+            <!-- RESULT HEADER -->
+
+            <div class="result-top">
+
+                <div>
+
+                    <div class="route-eyebrow">
+                        ROUTE FOUND
+                    </div>
+
+                    <h2>
+                        Your walking route
+                    </h2>
+
+                </div>
+
+                <div class="ready-badge">
+                    ● Ready
+                </div>
+
+            </div>
+
+
+
+            <!-- ROUTE SUMMARY -->
+
+            <div class="route-summary">
+
+
+                <div class="summary-item">
+
+                    <div class="summary-icon">
+                        📏
+                    </div>
+
+                    <div>
+
+                        <span>
+                            DISTANCE
+                        </span>
+
+                        <strong id="routeDistance">
+                            0 m
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <div class="summary-icon">
+                        🚶
+                    </div>
+
+                    <div>
+
+                        <span>
+                            WALKING TIME
+                        </span>
+
+                        <strong id="routeTime">
+                            0 min
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <div class="summary-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <span>
+                            LOCATIONS
+                        </span>
+
+                        <strong id="routeStops">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= ROUTE CONTENT ================= -->
+
+            <div class="route-content">
+
+
+                <!-- MAP -->
+
+                <div class="route-map-container">
+
+                    <div class="route-map-title">
+
+                        <span>
+                            CAMPUS PATH
+                        </span>
+
+                        <small>
+                            Walking route
+                        </small>
+
+                    </div>
+
+
+                    <div class="route-map">
+
+                        <!-- decorative roads -->
+
+                        <div class="route-road route-road-a"></div>
+
+                        <div class="route-road route-road-b"></div>
+
+                        <div class="route-road route-road-c"></div>
+
+                        <div class="route-road route-road-d"></div>
+
+
+                        <!-- green areas -->
+
+                        <div class="route-tree tree-1">
+                            🌳 🌳
+                        </div>
+
+                        <div class="route-tree tree-2">
+                            🌳 🌳 🌳
+                        </div>
+
+
+                        <!-- buildings -->
+
+                        <div class="route-building rb-a">
+                            A
+                        </div>
+
+                        <div class="route-building rb-h">
+                            H
+                        </div>
+
+                        <div class="route-building rb-u">
+                            U
+                        </div>
+
+                        <div class="route-building rb-library">
+                            📚
+                        </div>
+
+                        <div class="route-building rb-admin">
+                            🏛️
+                        </div>
+
+                        <div class="route-building rb-sports">
+                            🏟️
+                        </div>
+
+
+                        <!-- SVG route -->
+
+                        <svg
+                            id="routeSvg"
+                            viewBox="0 0 700 400">
+
+                            <path
+                                id="routePath"
+                                d="">
+                            </path>
+
+                        </svg>
+
+
+                        <!-- markers -->
+
+                        <div id="routeMarkers"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DIRECTIONS -->
+
+                <div class="directions-card">
+
+                    <div class="directions-heading">
+
+                        <h3>
+                            Walking directions
+                        </h3>
+
+                        <span>
+                            Follow the highlighted path
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="directionsList"
+                        class="directions-list">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= ACTIONS ================= -->
+
+            <div class="route-bottom">
+
+                <button
+                    id="clearRoute"
+                    class="clear-route">
+
+                    Clear Route
+
+                </button>
+
+
+                <a
+                    href="map.html"
+                    class="open-map">
+
+                    🗺️ Open Campus Map
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <div class="footer-brand">
+                    Vignan CampusNav
+                </div>
+
+                <p>
+                    Smart navigation for a smarter campus.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="map.html">
+                    Campus Map
+                </a>
+
+                <a href="route.html">
+                    Find Route
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Vignan CampusNav
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="common.js"></script>
+
+    <script src="route.js"></script>
+
+</body>
+
+</html>
